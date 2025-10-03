@@ -1,0 +1,201 @@
+body {
+    display: grid;
+    background-color: #E6EFF5;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Karla", sans-serif;
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 635px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+/* PANEL 1 */
+.welcome-panel {
+    grid-column: 1 / 3;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem .5rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.welcome-panel  .text {
+    max-width: 88%;
+}
+
+
+
+.welcome-panel .text  h1{
+    color: #2AB3B1;
+}
+
+
+
+.welcome-panel .text  h3{
+    color: #C0DF33;
+    margin-bottom: -10px;
+}
+
+
+
+.welcome-panel .text  p{
+    color: #9AA7BE;
+    line-height: 1.7;
+}
+
+
+
+/* PANEL 2*/
+.subscribe-panel {
+    grid-column: 1 ;
+    grid-row: 2;
+    background-color: #2AB3B1;
+    color: white;
+    padding: 1rem;
+    border-radius: 0 0 0 .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.subscribe-panel .price {
+    display: flex;
+    align-items: center;
+    margin: -30px 0;
+    gap: 10px;
+}
+
+
+
+.dollar{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+
+.dollar-per {
+    color: #94D9D8;
+}
+
+
+
+.subscribe-panel button {
+    background-color: #C0DF33;
+    color: white;
+    border: none;
+    border-radius: .35rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 00.2);
+    width: 15rem;
+    height: 2.5rem;
+    margin: 1rem 0;
+}
+
+
+
+/* PANEL 3*/
+.why-panel {
+    grid-column: 2 ;
+    grid-row: 2;
+    background-color: #4ABFBD;
+    padding: 1rem;
+    box-shadow: -5px 0px 10px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.why-panel .text  h3 {
+    color: white;
+}
+
+
+
+.why-panel .text  p {
+    color: #dafcfb;
+    font-weight: 100;
+}
+
+
+
+/* RESPONSIVE */
+@media  screen and (max-width: 768px) {
+    .welcome-panel .text  h1{
+        font-size: 1.75rem;
+    }
+}
+
+
+
+@media  screen and (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 635px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+
+
+    /* PANEL 1 */
+.welcome-panel {
+    grid-column: 1; 
+    grid-row: 1;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem .5rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+    /* PANEL 2*/
+.subscribe-panel {
+    grid-column: 1 ;
+    grid-row: 2;
+    background-color: #2AB3B1;
+    border-radius: 0 0 0 0 ;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* PANEL 3*/
+.why-panel {
+    grid-column: 1 ;
+    grid-row: 3;
+    background-color: #4ABFBD;
+    padding: 1rem;
+    box-shadow: -5px 0px 10px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+}
